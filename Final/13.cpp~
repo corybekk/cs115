@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std; // dont forget to put using up front
+
+int Count (int B[], int size, float target);
+
+const int SIZE = 5;
+
+int main()
+{
+  int A[SIZE]; // remember to intialize A to an array, and make sure to use SIZE 
+
+   for(int e= 0; e<SIZE; e++)
+     A[e]=0;
+  
+   A[0] = 2;// this has to be under the first for loop
+
+  for(int e = 1; e < SIZE; e++)
+    {
+      A[e] = 1 + 3 * A[e-1];
+    }
+
+  for(int e = 1; e < SIZE; e++)
+    {
+      cout<< A[e] << endl;
+    }
+  cout << Count (A, SIZE, 22);
+
+  return 0;
+
+}
+
+int Count (int B[], int size, float target)
+{  
+int count;
+
+  for(int i =0; i<size; i++)
+    {
+      if(B[i]== target)
+	count ++;
+    }
+  return count;
+}
