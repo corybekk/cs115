@@ -1,0 +1,3 @@
+mail -s "$1" corybek@hotmail.com < $2 # Cory Bekker cbekker
+
+

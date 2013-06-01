@@ -1,0 +1,58 @@
+/* Program: CS 115 Lab 4f
+
+   Author: cory b
+
+   Description: This program will determine whether two numeric values are positive.
+
+*/
+
+#include <iostream>
+
+using namespace std;
+
+ 
+
+int main () {
+
+  float  x, y; // Variables to store user input
+
+   
+
+  /* Prompt for numeric values */
+
+  cout << "Enter two numeric values x and y: ";
+
+  cin >> x >> y;
+
+   
+
+  /* Print which variables are positive */
+
+  if ( (x > 0) && (y > 0) ) {
+
+    cout << "Both are positive." << endl;
+
+  }
+
+  if ( (x > 0) && (y <= 0) ) {
+
+    cout << "Only x is positive." << endl;
+
+  }
+
+  if ( (x <= 0) && (y > 0) )  {
+
+    cout << "Only y is positive." << endl;
+
+  }
+
+
+  if ( (x <= 0) && (y <= 0) ) {
+
+    cout << "Neither is positive." << endl;
+
+  }
+
+  return 0;
+
+}

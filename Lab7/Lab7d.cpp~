@@ -1,0 +1,138 @@
+/* Program: CS 115 Lab 7d
+   Author: Cory Bekker
+   Description: This program uses functions to calculate geometric quantities.
+*/
+#include <iostream>
+using namespace std;
+ 
+const float pi = 3.14159;
+ 
+// Print a menu and read the user's choice
+char Menu( );
+ 
+// Using a specific prompt, ask for a numeric value
+float GetNumericVal(string description);
+ 
+// Ask the user for the side length of a square and print the area
+float SquareArea( ); 
+ 
+// Ask the user for the radius of a circle and print the area
+float CircleArea( );
+ 
+// Ask the user for the edge length of a cube and print the volume
+float CubeVolume( );
+
+float RectangleArea( );
+
+ 
+int main () {
+  char choice;
+  float inVal;
+  cout.setf (ios::fixed);
+  cout.setf (ios::showpoint);
+  cout.precision (2);
+ 
+  do  {
+    choice = Menu( );
+ 
+    switch( choice ) {
+    case 'a':
+      cout << "The area is " << SquareArea( ) << endl;
+      break;
+    case 'b':
+      cout << "The area is " << CircleArea( ) << endl;
+      break;
+    case 'c':
+      cout << "The volume is " << CubeVolume( ) << endl;
+      break;   
+    case 'd':
+      cout << "The Area is " << RectangleArea( ) << endl; 
+    }
+  } while (choice != 'q');
+ 
+  cout << "Goodbye!\n";
+  return 0;
+}
+ 
+/* ****************************************
+ * GetNumericVal
+ *
+ * Prompts the user to enter a numeric value
+ * and returns that (floating-point) value.
+ *
+ * Parameter: description of what to ask for
+ * 
+ * The function will print out:
+ *     Enter the [description].
+ * It will then read and return the value
+ * input by the user.
+ * ************************************** */
+float GetNumericVal(string description) {
+ 
+
+  float value = 0;
+  cout << "Enter the " << description << ".\n";
+  cin >> value;
+  return value;
+
+}
+
+char Menu( ) {
+  cout << "Would  you like to " << endl;
+  cout << "a. Calculate the area of a square? " << endl;
+  cout << "b. Calculate the are of a circle? " << endl;
+  cout << "c. Calculate the volume of a cube? " << endl;
+  cout << "d. Calculate the area of a rectangle? " << endl; 
+  cout << "q. Quit? " << endl << endl; 
+  cout << "please enter a, b, c, q. " << endl;
+ 
+  char variable;
+  cin >> variable;
+  return variable;
+
+}
+
+float SquareArea( ) {
+  
+  float side = GetNumericVal("side of the square");
+  float SquareArea;
+  
+   
+    SquareArea = side * side;  
+
+  return SquareArea; 
+
+ }
+
+float CircleArea( ) {
+
+  float radius = GetNumericVal("radius of circle");
+  float CircleArea;
+
+  CircleArea = pi * radius * radius;
+
+  return CircleArea;
+ }
+
+
+float CubeVolume( ) {
+
+  float side = GetNumericVal("side of cube");
+  float CubeVolume;
+
+  CubeVolume = side * side *side;
+
+  return CubeVolume;
+ }
+
+float RectangleArea( ) {
+
+  float side1 = GetNumericVal("length of rectangle");
+  float side2 = GetNumericVal("width of rectangle");
+  float RectangleArea;
+
+  RectangleArea = side1 * side2;
+
+  return RectangleArea;
+
+}

@@ -1,0 +1,14 @@
+While editing the program I encounterd many errors. I messsed up on the variables because I did not intiate them to 0. Everytime I tried to run the program I was getting random output. I also had a hard time understanding what I was supposed to do off the text. I figured it out sooner of later. Most of the time I was puting small syntax errors causing the program to fail and give errors. I had a hard time editing main so it could print out the letter grade, but I figured it out. 
+
+PROJECT 3-2
+
+For this prject I ran into many different errors. I did not know what to do for many parts of the 
+program. I did not know how to modify the program to read the date and name of the assignment. For part 4 I knew that I needed to use "getline" but I  needed help figuring out how. I also could not figure out on my own how to print the number of assignments. I had trouble with every step. I came to a conclusion after finding out how to solve these problems that I would have not been able to figure it out myself. 
+
+PROJECT 3-3
+
+In Project 3-3 I ran into a couple of problems. I had a hard time understanding what the 
+project sheet was asking me to do. I had trouble with implementing the swap and sort 
+function because in class my hand writing is messy. It was hard to copy it. My fault 
+completly. I figured out how to print everything out perfectly and modified the functions
+without any problems. 

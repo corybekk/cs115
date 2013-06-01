@@ -1,0 +1,208 @@
+//Name: Cory Bekker
+//Course: Computer Science 115
+//#: Lab13
+
+#include <iostream>
+#include <iomanip>
+#include "roster.h"
+
+using namespace std;
+
+/* Default constructor for Student
+ *
+ * Creates a new Student
+ * Sets name to the empty string and all scores to 0
+ */
+
+Student::Student() 
+{
+  name = "";
+  for (int i=0; i < NUM_TESTS; i++) 
+    {
+      scores[i] = 0;
+    }
+  average = 0;
+}
+
+//=========================================================================
+/* Copy constructor for Student
+ *
+ * Defines how to make a copy of a Student
+ * 
+ */
+
+Student::Student(const Student& s) 
+{
+  name = s.name;
+
+  for (int i=0; i < NUM_TESTS; i++) 
+    {
+      scores[i] = s.scores[i];
+    }
+
+  average = s.average;
+}
+//======================================================================
+/* SetName
+ *
+ * Parameter: name_to_use
+ * Initializes the Student's name to name_to_use
+ */
+
+void Student::SetName(string name_to_use) 
+{
+  name = name_to_use;
+}
+//====================================================================
+/* GetName
+ * Returns the Student's name
+ */
+string Student::GetName() 
+{ 
+  return name; 
+}
+//===================================================================
+/* SetScores
+ *
+ * Parameters: an integer array containing the student's scores
+ * Sets the student's cores and average
+ */
+
+void Student::SetScores(int scores_to_use[]) 
+{
+  float total = 0;
+
+  for (int i=0; i < NUM_TESTS; i++) 
+
+    {
+      scores[i] = scores_to_use[i];
+      total += scores[i];
+    }
+
+  average = total/NUM_TESTS;
+}
+//==================================================================
+/* GetSingleScore
+ *
+ * Parameters: index of the score to get (a number between 0 and  NUM_TESTS-1)
+ * Returns: the corresponding score (scores[index]) or -1 if index is invalid
+ */
+
+int Student::GetSingleScore(int index) 
+{
+
+  if (index < 0 or index >= NUM_TESTS) 
+    {
+      return -1;
+    }
+
+    return scores[index];
+    }
+//==================================================================
+   /* GetAvgScore
+   *
+   * Returns the student's test average
+   */
+
+  float Student::GetAvgScore() 
+  { 
+    return average; 
+  }
+//=================================================================
+  /* Print
+   *
+   * Print the student's name and scores, separated by tabs
+   */
+
+  void Student::Print() 
+  {
+    cout << setw(10) << name << '\t';
+
+    for (int i=0; i < NUM_TESTS; i++) 
+
+      {
+	cout << scores[i] << '\t';
+      }
+
+    cout << average << endl;
+  }
+//===================================================================
+
+ Roster::Roster()
+{
+  num_students = 0;
+}
+//================================================================
+void Roster::Sort()
+{
+  bool swapped=true;
+
+  for (int i = 0; i < num_students and swapped == true; i++)
+    {
+      swapped = false;
+      for (int j = 1; j < num_students - i; j++)
+        {
+          if (students[j].GetName() < students[j-1].GetName())
+            {
+              swap (students[j], students[j-1]);
+
+              swapped = true;
+            }
+        }
+    }
+}
+//===================================================================
+void Roster::Print ()
+{
+  for (int i=0; i<num_students; i++)
+    {
+      students[i].Print();
+    }
+}
+//===============================================================
+float Roster::GetOverallAverage()
+{
+  float sum =0;
+
+  for (int i=0; i<num_students; i++)
+    {
+      sum += students[i].GetAvgScore();
+    }
+
+  float avg = sum/num_students;
+
+  return avg;
+}
+//================================================================
+bool Roster::AddStudent(string name_to_use, int scores_to_use[])
+{
+  if(num_students == MAX_STUDENTS)
+    {
+      return false;
+    }
+
+  students[num_students].SetName(name_to_use);
+  students[num_students].SetScores(scores_to_use);
+
+  num_students++;
+ 
+ return true;
+}
+
+//==================================================================================
+
+
+void Swap (Student& a, Student& b)
+{
+  Student t = a;
+  a = b;
+  b = t;
+}
+
+
+
+
+
+
+
+

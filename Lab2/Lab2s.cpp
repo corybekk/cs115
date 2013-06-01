@@ -1,0 +1,63 @@
+// Program: CS 115 Lab 2
+
+// Author: cory
+
+// Description: This program will be used to test input and 
+
+//                  output for a string variable.
+
+ 
+
+#include <iostream>
+
+using namespace std;
+
+ 
+
+int main () {
+
+ 
+
+  // Declare a string  variable.
+
+  // This variable will eventually hold the value that the user types.
+
+  string value = "???";
+
+    
+
+  // Prompt the user to enter a value.
+
+  cout << "Enter a value: ";
+
+    
+
+  // Read from the user's input into our variable.
+
+  cin >> value;
+
+    
+
+  // Print the value that we just read -- does it match what the user 
+
+  // typed?
+
+  cout << "The value you entered is " << value << endl;
+
+    
+
+  // Print cin.fail(), which will be 1 if cin failed to read anything 
+
+  // into the variable.
+
+  cout << "The value of cin.fail() is " << cin.fail() << endl;
+
+  return 0;
+
+}
+
+ 
+
+
+
+ 

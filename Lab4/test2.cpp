@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+
+int main () 
+{
+
+  float total = 0;
+  int value;
+  int ctr = 1;
+
+  cout << "enter 3 numberic values: ";
+
+  for (ctr = 1; ctr <= 4; ctr++)
+    {
+      cin >> value;
+      total = total + value;
+      ctr++;
+    }
+
+  cout << total / 3 << endl;
+
+  return 0;
+}

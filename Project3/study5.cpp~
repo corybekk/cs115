@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main () {
+
+  float total =0;
+  float value [3];
+  int ctr =0;
+
+  cout <<"enter 3 numeric calues"<< endl; 
+
+  for (ctr =1; ctr <=4; ctr++)
+    {
+      cin >> value [ctr];
+      total = total + value[ctr];
+      ctr++;
+    }
+  for (ctr =1; ctr <=4; ctr++)
+    {
+      cout<<ctr<< ":" <<value[ctr]<< endl;
+    }
+
+
+  return 0;
+}

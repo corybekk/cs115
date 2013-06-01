@@ -1,0 +1,48 @@
+How many bits are in a byte?
+a. 4
+b. 8
+c. 16
+d. 32
+b
+How does a program know if the end of an input file has been reached?
+a. The input file writes EOF to the console.
+b. The program cannot tell.
+c. The input file's fail flag is set when the program tries to read beyond the end of the file.
+d. The program always knows how many lines are in the input file.
+c
+What is the purpose of the .c_str() method of the C++ string class?
+a. It returns the C string equivalent of the string.
+b. It calculates the length of the string.
+c. It opens a file whose name is stored in the string.
+d. It converts the string to a C string.
+a
+The array declared as: int Array[5]
+a. Contains the value 5.
+b. Contains 5 values with indices 1, 2, 3, 4, and 5.
+c. Contains 5 values with indices 0, 1, 2, 3, and 4.
+b. Contains 6 values with indices 0, 1, 2, 3, 4, and 5.
+c
+A function prototype contains the function's
+a. Name
+b. Return type
+c. Parameter descriptions
+d. All of the above
+d
+An else claus can be associated with
+a. A while loop.
+b. A for loop.
+c. An if statement.
+d. A do-while loop.
+c
+The C++ library should be included for which of the following statements?
+a. ifstream inFile;
+b. inFile >> value;
+c. inFile.close();
+d. All of the above.
+d
+A void function
+a. Has no return value
+b. Returns the contents of its parameter
+c. Returns an integer
+d. Returns a -1 if the stream fails, 0 otherwise
+a
